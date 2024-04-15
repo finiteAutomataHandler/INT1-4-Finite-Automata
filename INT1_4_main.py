@@ -1,8 +1,23 @@
 from INT1_4_displayFunctions import *
+from INT1_4_readAutomatons import *
 
 if __name__ == '__main__':
 
     print("INT1-4 ROUGIER Jules, VAIO Lorenzo, LEBRAS Valentin, BRAHAM Kenzan and MARCHAL Thomas")
+
+    file = selectFile()
+    alphabet, states, initialStates, finalStates, listTransitions = openFile(file)
+    print('\n')
+    print(alphabet)
+    print('\n')
+    print(states)
+    print('\n')
+    print(initialStates)
+    print('\n')
+    print(finalStates)
+    print('\n')
+    print(listTransitions)
+    print('\n')
 
     choice = 0
     choiceList = ["1", "2", "3", "4", "5", "6", "7", "8"]
@@ -17,8 +32,9 @@ if __name__ == '__main__':
 
         if choice == "1":
 
-            #1. Display the table of the automate
-            break
+            print("\n\n\n\n================== DISPLAY AUTOMATON ================== \n")
+            displayAutomaton(alphabet, states, initialStates, finalStates, listTransitions)
+            input("\nPress to continue\n")
 
         elif choice == "2":
 
