@@ -11,6 +11,13 @@ def displayMenu():
     print("7. Obtain a complementary automate") #also check word recognition
     print("8. Quit")
 
+def displayCaracteristics():
+    print("\n\n\n\n================ CARACTERISTICS MENU ================\n")
+    print("1. Check if deterministic")
+    print("2. Check if complete")  
+    print("3. Check if standart")
+    print("4. Quit")
+
 def getStateArrow(i, initialStates, finalStates):
     if i in initialStates and i in finalStates:
         return ("<-->")
