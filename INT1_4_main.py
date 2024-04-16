@@ -1,6 +1,7 @@
 from INT1_4_displayFunctions import *
 from INT1_4_readAutomatons import *
 from INT1_4_determinize import *
+from INT1_4_complete import *
 
 if __name__ == '__main__':
 
@@ -51,10 +52,18 @@ if __name__ == '__main__':
                 else:
                     print("This automaton is not deterministic")
 
+                input("\nPress to continue\n")
+
             elif option == "2":
 
                 #2. Check if complete
-                break
+                complete = isComplete(alphabet, states, finalStates, listTransitions)
+                if complete:
+                    print("This automaton is complete")
+                else:
+                    print("This automaton is not complete")
+
+                input("\nPress to continue\n")
 
             elif option == "3":
 
