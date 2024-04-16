@@ -2,6 +2,7 @@ from INT1_4_displayFunctions import *
 from INT1_4_readAutomatons import *
 from INT1_4_determinize import *
 from INT1_4_complete import *
+from INT1_4_standart import *
 
 if __name__ == '__main__':
 
@@ -67,8 +68,13 @@ if __name__ == '__main__':
 
             elif option == "3":
 
-                #3. Check if standart
-                break
+                standart = isStandart(initialStates, listTransitions)
+                if standart:
+                    print("This automaton is standart")
+                else:
+                    print("This automaton is not standart")
+                
+                input("\nPress to continue\n")
 
             elif option == "4":
 
