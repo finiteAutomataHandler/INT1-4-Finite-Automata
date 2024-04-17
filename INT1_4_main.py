@@ -106,6 +106,18 @@ if __name__ == '__main__':
         elif choice == "4":
 
             #4. Obtain an equivalent complete deterministic FA
+            determinized= isDeterministic(alphabet, states, initialStates, listTransitions)
+            complete= isComplete(alphabet, states, finalStates, listTransitions)
+            if determinized and complete:
+                print("The automaton is already deterministic and complete!")
+                if determinized:
+                    comp_transitions = completeAutomaton(alphabet, states, finalStates, listTransitions)
+                else:
+                    det_alphabet, det_states, det_initialStates, det_finalStates, det_transitions = determinizeAutomaton(alphabet, states, initialStates, listTransitions, finalStates)
+                    comp_transitions = completeAutomaton(det_alphabet, det_states, det_transitions)
+
+                displayAutomaton(det_alphabet, det_states, det_initialStates, det_finalStates, comp_transitions)        
+            input("\nPress to continue\n")
             break
 
         elif choice == "5":
