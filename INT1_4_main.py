@@ -3,6 +3,7 @@ from INT1_4_readAutomatons import *
 from INT1_4_determinize import *
 from INT1_4_complete import *
 from INT1_4_standart import *
+from INT1_4_Minimize import *
 
 if __name__ == '__main__':
 
@@ -21,6 +22,7 @@ if __name__ == '__main__':
     file = selectFile()
     alphabet, states, initialStates, finalStates, listTransitions = openFile(file)
 
+    print(alphabet, states, initialStates, finalStates, listTransitions)
 
     choice = 0
     choiceList = ["1", "2", "3", "4", "5", "6", "7", "8"]
@@ -35,7 +37,7 @@ if __name__ == '__main__':
             choice = input("\nPlease redo : \n -> ")
 
         if choice == "1":
-
+            
             #1. Display the table of the automate
             print("\n\n\n\n================== DISPLAY AUTOMATON ================== \n")
             displayAutomaton(alphabet, states, initialStates, finalStates, listTransitions)
@@ -51,7 +53,7 @@ if __name__ == '__main__':
                 option = input("\nPlease redo : \n -> ")
 
             if option == "1":
-
+                
                 #1. Check if deterministic
                 deterministic = isDeterministic(alphabet, states, initialStates, listTransitions)
                 if deterministic:
@@ -111,7 +113,12 @@ if __name__ == '__main__':
         elif choice == "5":
 
             #5. Obtain an equivalent minimal FA
-            break
+            minimized = minimize(alphabet, states, initialStates, finalStates, listTransitions)
+            print("Minimized DFA:")
+            print(alphabet, states, initialStates, finalStates, listTransitions)
+            print(minimized)
+            displayAutomaton(minimized[0], minimized[1], minimized[2], minimized[3], minimized[4])
+            
 
         elif choice == "6":
 
