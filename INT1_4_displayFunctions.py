@@ -32,6 +32,7 @@ def getStateArrow(i, initialStates, finalStates):
 
 
 def displayAutomaton(alphabet, states, initialStates, finalStates, listTransitions):
+    print("\n\n\n\n================= DISPLAY AUTOMATON ================= \n")
 
     table = PrettyTable()
 

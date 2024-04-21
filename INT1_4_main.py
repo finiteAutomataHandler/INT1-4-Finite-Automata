@@ -22,8 +22,6 @@ if __name__ == '__main__':
     file = selectFile()
     alphabet, states, initialStates, finalStates, listTransitions = openFile(file)
 
-    print(alphabet, states, initialStates, finalStates, listTransitions)
-
     choice = 0
     choiceList = ["1", "2", "3", "4", "5", "6", "7", "8"]
     optionList = ["1", "2", "3", "4"]
@@ -39,7 +37,6 @@ if __name__ == '__main__':
         if choice == "1":
             
             #1. Display the table of the automate
-            print("\n\n\n\n================== DISPLAY AUTOMATON ================== \n")
             displayAutomaton(alphabet, states, initialStates, finalStates, listTransitions)
             input("\nPress to continue\n")
 
@@ -112,12 +109,15 @@ if __name__ == '__main__':
             deterministic = isDeterministic(alphabet, states, initialStates, listTransitions)
             complete = isComplete(alphabet, states, finalStates, listTransitions)
         
-            if not (deterministic and complete):
+            if not (deterministic or complete):
                 if not deterministic:
+                    print("This  automaton is not deterministic\n")
                     alphabet, states, initialStates, finalStates, listTransitions = determinize(alphabet, states, initialStates, finalStates, listTransitions)
                 if not complete:
+                    print("This  automaton is not complete\n")
                     alphabet, states, initialStates, finalStates, listTransitions = completeAutomaton(alphabet, states, initialStates, finalStates, listTransitions)
             
+            print("The deterministic and complete automaton :\n")
             displayAutomaton(alphabet, states, initialStates, finalStates, listTransitions)
 
 
@@ -128,22 +128,18 @@ if __name__ == '__main__':
             #5. Obtain an equivalent minimal FA
             minimized = minimize(alphabet, states, initialStates, finalStates, listTransitions)
             print("Minimized DFA:")
-            print(alphabet, states, initialStates, finalStates, listTransitions)
-            print(minimized)
             displayAutomaton(minimized[0], minimized[1], minimized[2], minimized[3], minimized[4])
             
 
         elif choice == "6":
 
             #6. Word Recognation
-            
-
-            break
+            pass
 
         elif choice == "7":
 
             #7. Obtain a complementary automate
-            break
+            pass
 
         elif choice == "8":
 
