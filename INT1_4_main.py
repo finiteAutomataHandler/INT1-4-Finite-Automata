@@ -107,8 +107,20 @@ if __name__ == '__main__':
 
         elif choice == "4":
 
-            #4. Obtain an equivalent complete deterministic FA
-            break
+            #1. Check if deterministic
+            deterministic = isDeterministic(alphabet, states, initialStates, listTransitions)
+            if deterministic:
+                print("This automaton is  already deterministic !")
+            else:
+                print("This automaton is not deterministic")
+
+                detAlphabet, detStates, detInitialStates, detFinalStates, detTransitions = determinize(alphabet, states, initialStates, finalStates, listTransitions)
+
+                print("We obtain the following deterministic automaton :")
+                displayAutomaton(detAlphabet, detStates, detInitialStates, detFinalStates, detTransitions)
+
+
+            input("\nPress to continue\n")
 
         elif choice == "5":
 
