@@ -6,7 +6,7 @@ def minimize(alphabet, states, initialStates, finalStates, listTransitions):
         transitionTable[state] = {}
     for transition in listTransitions:
         state, letter, nextState = transition.split(',')
-        print(state, letter, nextState)
+        #print(state, letter, nextState)
         transitionTable[state][letter] = nextState
 
     # Helper function to check if two states are distinguishable
@@ -85,12 +85,3 @@ def minimize(alphabet, states, initialStates, finalStates, listTransitions):
 
     return [alphabet, new_states, list(new_initial_states), list(new_final_states), new_listTransitions]
 
-# Example usage with provided inputs:
-alphabet = ['a', 'b']
-states = ['0', '1', '2']
-initialStates = ['1']
-finalStates = ['0']
-listTransitions = ['1,a,2', '1,b,2', '2,b,0', '0,a,0', '0,b,0']
-
-minimized_dfa = minimize(alphabet, states, initialStates, finalStates, listTransitions)
-print(minimized_dfa)

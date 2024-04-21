@@ -1,0 +1,79 @@
+Please, enter the automaton id :
+
+19
+['a'] ['0', '1', '2'] ['1'] ['0'] ['1,a,2', '2,a,0', '0,a,0']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is already standardized
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 4
++--------+--------+--------------+
+| Status | States | Transition a |
++--------+--------+--------------+
+|  <--   |   0    |      0       |
+|  -->   |   1    |      2       |
+|        |   2    |      0       |
++--------+--------+--------------+
+
+Press to continue
+5
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+Minimized DFA:
+['a'] ['0', '1', '2'] ['1'] ['0'] ['1,a,2', '2,a,0', '0,a,0']
+[['a'], ['0', '1', '2'], ['1'], ['0'], ['0,a,0', '1,a,2', '2,a,0']]
++--------+--------+--------------+
+| Status | States | Transition a |
++--------+--------+--------------+
+|  <--   |   0    |      0       |
+|  -->   |   1    |      2       |
+|        |   2    |      0       |
++--------+--------+--------------+
