@@ -137,9 +137,9 @@ if __name__ == '__main__':
             word_recognition(alphabet, states, initial_states, final_states, list_transitions)
 
         elif choice == "7":
-            complementary_automaton = complementary_automaton(alphabet, states, initial_states, final_states, list_transitions)
+            complementary_automaton = complementary_automaton(alphabet, states, initialStates, finalStates, listTransitions)
             print("Complementary Automaton:")
-            display_automaton(complementary_automaton[0],complementary_automaton[1], complementary_automaton[2], complementary_automaton[3], complementary_automaton[4])
+            displayAutomaton(complementary_automaton[0],complementary_automaton[1], complementary_automaton[2], complementary_automaton[3], complementary_automaton[4])
 
             word_recognition(complementary_automaton[0],complementary_automaton[1], complementary_automaton[2], complementary_automaton[3], complementary_automaton[4])
             
