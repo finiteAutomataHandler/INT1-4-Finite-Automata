@@ -41,7 +41,7 @@ def complementary_automaton(alphabet, states, initial_states, final_states, list
     # Return the complementary automaton
     return alphabet, states, initial_states, complementary_final_states, transitions
 
-def recognize_word(alphabet, states, initial_states, final_states, list_transitions):
+def word_recognition(alphabet, states, initial_states, final_states, list_transitions):
     while True:
         word = read_word()
 
