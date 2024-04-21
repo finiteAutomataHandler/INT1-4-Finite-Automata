@@ -4,6 +4,7 @@ from INT1_4_determinize import *
 from INT1_4_complete import *
 from INT1_4_standart import *
 from INT1_4_Minimize import *
+from INT1_4_Complementary_and_recognition import *
 
 if __name__ == '__main__':
 
@@ -133,14 +134,15 @@ if __name__ == '__main__':
 
         elif choice == "6":
 
-            #6. Word Recognation
-            pass
+            word_recognition(alphabet, states, initial_states, final_states, list_transitions)
 
         elif choice == "7":
 
-            #7. Obtain a complementary automate
-            pass
+            print("Complementary Automaton:")
+            display_automaton(complementary_automaton(alphabet, states, initial_states, final_states, list_transitions))
 
+            word_recognition(complementary_automaton(alphabet, states, initial_states, final_states, list_transitions))
+            
         elif choice == "8":
 
             #8. Quit
