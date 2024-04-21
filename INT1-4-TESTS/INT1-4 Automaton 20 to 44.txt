@@ -1,0 +1,1833 @@
+Please, enter the automaton id :
+
+20
+['a', 'b', 'c', 'd'] ['0', '1', '2', '3', '4', '5', '6', '7', '8'] ['1', '6', '7', '8', '0'] ['5'] ['1,a,2', '6,a,2', '2,b,3', '7,b,3', '3,c,4', '8,c,4', '4,d,5', '0,d,5']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is not standardized, creating a new version now :
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b', 'c', 'd']
+Initial States : ['i']
+Final States : ['5']
+List of States : ['0', '1', '2', '3', '4', '5', '6', '7', '8', 'i']
+List of transitions : ['1,a,2', '6,a,2', '2,b,3', '7,b,3', '3,c,4', '8,c,4', '4,d,5', '0,d,5', 'i,a,2', 'i,b,3', 'i,c,4', 'i,d,5']
+
+Press to continue
+
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 4
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition d |
++--------+--------+--------------+--------------+--------------+--------------+
+|  -->   | 16780  |      2       |      3       |      4       |      5       |
+|        |   2    |      P       |      3       |      P       |      P       |
+|        |   3    |      P       |      P       |      4       |      P       |
+|        |   4    |      P       |      P       |      P       |      5       |
+|  <--   |   5    |      P       |      P       |      P       |      P       |
+|        |   P    |      P       |      P       |      P       |      P       |
++--------+--------+--------------+--------------+--------------+--------------+
+
+Press to continue
+
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+16780 a 2
+16780 b 3
+16780 c 4
+16780 d 5
+2 b 3
+3 c 4
+4 d 5
+P a P
+P b P
+P c P
+P d P
+2 a P
+2 c P
+2 d P
+3 a P
+3 b P
+3 d P
+4 a P
+4 b P
+4 c P
+5 a P
+5 b P
+5 c P
+5 d P
+Minimized DFA:
+['a', 'b', 'c', 'd'] ['16780', '2', '3', '4', '5', 'P'] 16780 ['5'] ['16780,a,2', '16780,b,3', '16780,c,4', '16780,d,5', '2,b,3', '3,c,4', '4,d,5', 'P,a,P', 'P,b,P', 'P,c,P', 'P,d,P', '2,a,P', '2,c,P', '2,d,P', '3,a,P', '3,b,P', '3,d,P', '4,a,P', '4,b,P', '4,c,P', '5,a,P', '5,b,P', '5,c,P', '5,d,P']
+[['a', 'b', 'c', 'd'], ['16780', '2', '3', '4', '5', 'P'], ['16780'], ['5'], ['16780,a,2', '16780,b,3', '16780,c,4', '16780,d,5', '2,b,3', '2,a,P', '2,c,P', '2,d,P', '3,c,4', '3,a,P', '3,b,P', '3,d,P', '4,d,5', '4,a,P', '4,b,P', '4,c,P', '5,a,P', '5,b,P', '5,c,P', '5,d,P', 'P,a,P', 'P,b,P', 'P,c,P', 'P,d,P']]
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition d |
++--------+--------+--------------+--------------+--------------+--------------+
+|  -->   | 16780  |      2       |      3       |      4       |      5       |
+|        |   2    |      P       |      3       |      P       |      P       |
+|        |   3    |      P       |      P       |      4       |      P       |
+|        |   4    |      P       |      P       |      P       |      5       |
+|  <--   |   5    |      P       |      P       |      P       |      P       |
+|        |   P    |      P       |      P       |      P       |      P       |
++--------+--------+--------------+--------------+--------------+--------------+
+
+---------------------------------------------------
+Please, enter the automaton id :
+
+21
+['a', 'b', 'c', 'd'] ['0', '1', '2', '3'] ['1'] ['1'] ['1,a,2', '2,b,3', '3,c,0', '0,d,1']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is not standardized, creating a new version now :
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b', 'c', 'd']
+Initial States : ['i']
+Final States : ['1']
+List of States : ['0', '1', '2', '3', 'i']
+List of transitions : ['1,a,2', '2,b,3', '3,c,0', '0,d,1', 'i,a,2']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+1 a 2
+2 b 3
+3 c 0
+0 d 1
+Minimized DFA:
+['a', 'b', 'c', 'd'] ['0', '1', '2', '3'] ['1'] ['1'] ['1,a,2', '2,b,3', '3,c,0', '0,d,1']
+[['a', 'b', 'c', 'd'], ['0', '1', '2', '3'], ['1'], ['1'], ['0,d,1', '1,a,2', '2,b,3', '3,c,0']]
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition d |
++--------+--------+--------------+--------------+--------------+--------------+
+|        |   0    |     ---      |     ---      |     ---      |      1       |
+|  <-->  |   1    |      2       |     ---      |     ---      |     ---      |
+|        |   2    |     ---      |      3       |     ---      |     ---      |
+|        |   3    |     ---      |     ---      |      0       |     ---      |
++--------+--------+--------------+--------------+--------------+--------------+
+
+------------------------------------------------------------------------------------
+
+Please, enter the automaton id :
+
+22
+['a', 'b', 'c', 'd'] ['0', '1', '2', '3'] ['1'] ['1'] ['1,a,2', '1,a,0', '1,a,3', '2,b,3', '3,c,0', '0,d,1']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is not standardized, creating a new version now :
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b', 'c', 'd']
+Initial States : ['i']
+Final States : ['1']
+List of States : ['0', '1', '2', '3', 'i']
+List of transitions : ['1,a,2', '1,a,0', '1,a,3', '2,b,3', '3,c,0', '0,d,1', 'i,a,2', 'i,a,0', 'i,a,3']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+1 a 2
+1 a 0
+1 a 3
+2 b 3
+3 c 0
+0 d 1
+Minimized DFA:
+['a', 'b', 'c', 'd'] ['0', '1', '2', '3'] ['1'] ['1'] ['1,a,2', '1,a,0', '1,a,3', '2,b,3', '3,c,0', '0,d,1']
+[['a', 'b', 'c', 'd'], ['0', '1', '3'], ['1'], ['1'], ['0,d,1', '1,a,3', '3,c,0']]
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition d |
++--------+--------+--------------+--------------+--------------+--------------+
+|        |   0    |     ---      |     ---      |     ---      |      1       |
+|  <-->  |   1    |      3       |     ---      |     ---      |     ---      |
+|        |   3    |     ---      |     ---      |      0       |     ---      |
++--------+--------+--------------+--------------+--------------+--------------+
+
+------------------------------------------------------------------------------------
+Please, enter the automaton id :
+
+23
+['a', 'b', 'c', 'd'] ['0', '1', '2', '3', '4'] ['1'] ['0'] ['1,a,2', '2,a,2', '2,b,3', '3,b,3', '3,c,4', '4,c,4', '4,d,0', '0,d,0']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is already standardized
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b', 'c', 'd']
+Initial States : ['i']
+Final States : ['0']
+List of States : ['0', '1', '2', '3', '4', 'i']
+List of transitions : ['1,a,2', '2,a,2', '2,b,3', '3,b,3', '3,c,4', '4,c,4', '4,d,0', '0,d,0', 'i,a,2']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+1 a 2
+2 a 2
+2 b 3
+3 b 3
+3 c 4
+4 c 4
+4 d 0
+0 d 0
+Minimized DFA:
+['a', 'b', 'c', 'd'] ['0', '1', '2', '3', '4'] ['1'] ['0'] ['1,a,2', '2,a,2', '2,b,3', '3,b,3', '3,c,4', '4,c,4', '4,d,0', '0,d,0']
+[['a', 'b', 'c', 'd'], ['0', '1', '2', '3', '4'], ['1'], ['0'], ['0,d,0', '1,a,2', '2,a,2', '2,b,3', '3,b,3', '3,c,4', '4,c,4', '4,d,0']]
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition d |
++--------+--------+--------------+--------------+--------------+--------------+
+|  <--   |   0    |     ---      |     ---      |     ---      |      0       |
+|  -->   |   1    |      2       |     ---      |     ---      |     ---      |
+|        |   2    |      2       |      3       |     ---      |     ---      |
+|        |   3    |     ---      |      3       |      4       |     ---      |
+|        |   4    |     ---      |     ---      |      4       |      0       |
++--------+--------+--------------+--------------+--------------+--------------+
+------------------------------------------------------------------------------------
+Please, enter the automaton id :
+
+24
+['a', 'b', 'c', 'd'] ['0', '1', '2', '3', '4'] ['1'] ['0'] ['1,a,2', '1,b,3', '1,c,4', '1,d,0', '2,a,2', '2,b,3', '2,c,4', '2,d,0', '3,b,3', '3,d,0', '3,c,4', '4,c,4', '4,d,0', '0,d,0']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is already standardized
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b', 'c', 'd']
+Initial States : ['i']
+Final States : ['0']
+List of States : ['0', '1', '2', '3', '4', 'i']
+List of transitions : ['1,a,2', '1,b,3', '1,c,4', '1,d,0', '2,a,2', '2,b,3', '2,c,4', '2,d,0', '3,b,3', '3,d,0', '3,c,4', '4,c,4', '4,d,0', '0,d,0', 'i,a,2', 'i,b,3', 'i,c,4', 'i,d,0']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+1 a 2
+1 b 3
+1 c 4
+1 d 0
+2 a 2
+2 b 3
+2 c 4
+2 d 0
+3 b 3
+3 d 0
+3 c 4
+4 c 4
+4 d 0
+0 d 0
+Minimized DFA:
+['a', 'b', 'c', 'd'] ['0', '1', '2', '3', '4'] ['1'] ['0'] ['1,a,2', '1,b,3', '1,c,4', '1,d,0', '2,a,2', '2,b,3', '2,c,4', '2,d,0', '3,b,3', '3,d,0', '3,c,4', '4,c,4', '4,d,0', '0,d,0']
+[['a', 'b', 'c', 'd'], ['0', '1', '2', '3', '4'], ['1'], ['0'], ['0,d,0', '1,a,2', '1,b,3', '1,c,4', '1,d,0', '2,a,2', '2,b,3', '2,c,4', '2,d,0', '3,b,3', '3,d,0', '3,c,4', '4,c,4', '4,d,0']]
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition d |
++--------+--------+--------------+--------------+--------------+--------------+
+|  <--   |   0    |     ---      |     ---      |     ---      |      0       |
+|  -->   |   1    |      2       |      3       |      4       |      0       |
+|        |   2    |      2       |      3       |      4       |      0       |
+|        |   3    |     ---      |      3       |      4       |      0       |
+|        |   4    |     ---      |     ---      |      4       |      0       |
++--------+--------+--------------+--------------+--------------+--------------+
+
+------------------------------------------------------------------------------------
+Please, enter the automaton id :
+
+25
+['a', 'b', 'c', 'd'] ['0', '1', '2', '3', '4'] ['1'] ['0'] ['1,a,1', '1,a,2', '1,b,3', '1,c,4', '1,d,0', '2,b,2', '2,b,3', '2,c,4', '2,d,0', '3,c,3', '3,c,4', '3,d,0', '4,d,4', '4,d,0']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is not standardized, creating a new version now :
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b', 'c', 'd']
+Initial States : ['i']
+Final States : ['0']
+List of States : ['0', '1', '2', '3', '4', 'i']
+List of transitions : ['1,a,1', '1,a,2', '1,b,3', '1,c,4', '1,d,0', '2,b,2', '2,b,3', '2,c,4', '2,d,0', '3,c,3', '3,c,4', '3,d,0', '4,d,4', '4,d,0', 'i,a,1', 'i,a,2', 'i,b,3', 'i,c,4', 'i,d,0']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+1 a 1
+1 a 2
+1 b 3
+1 c 4
+1 d 0
+2 b 2
+2 b 3
+2 c 4
+2 d 0
+3 c 3
+3 c 4
+3 d 0
+4 d 4
+4 d 0
+Minimized DFA:
+['a', 'b', 'c', 'd'] ['0', '1', '2', '3', '4'] ['1'] ['0'] ['1,a,1', '1,a,2', '1,b,3', '1,c,4', '1,d,0', '2,b,2', '2,b,3', '2,c,4', '2,d,0', '3,c,3', '3,c,4', '3,d,0', '4,d,4', '4,d,0']
+[['a', 'b', 'c', 'd'], ['0', '1', '2', '3', '4'], ['1'], ['0'], ['1,a,2', '1,b,3', '1,c,4', '1,d,0', '2,b,3', '2,c,4', '2,d,0', '3,c,4', '3,d,0', '4,d,0']]
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition d |
++--------+--------+--------------+--------------+--------------+--------------+
+|  <--   |   0    |     ---      |     ---      |     ---      |     ---      |
+|  -->   |   1    |      2       |      3       |      4       |      0       |
+|        |   2    |     ---      |      3       |      4       |      0       |
+|        |   3    |     ---      |     ---      |      4       |      0       |
+|        |   4    |     ---      |     ---      |     ---      |      0       |
++--------+--------+--------------+--------------+--------------+--------------+
+------------------------------------------------------------------------------------
+
+26
+['a', 'b'] ['0', '1', '2', '3'] ['1'] ['3'] ['1,a,2', '1,b,2', '2,a,0', '2,b,3', '3,a,3', '3,b,3']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is already standardized
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b']
+Initial States : ['i']
+Final States : ['3']
+List of States : ['0', '1', '2', '3', 'i']
+List of transitions : ['1,a,2', '1,b,2', '2,a,0', '2,b,3', '3,a,3', '3,b,3', 'i,a,2', 'i,b,2']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+1 a 2
+1 b 2
+2 a 0
+2 b 3
+3 a 3
+3 b 3
+Minimized DFA:
+['a', 'b'] ['0', '1', '2', '3'] ['1'] ['3'] ['1,a,2', '1,b,2', '2,a,0', '2,b,3', '3,a,3', '3,b,3']
+[['a', 'b'], ['0', '1', '2', '3'], ['1'], ['3'], ['1,a,2', '1,b,2', '2,a,0', '2,b,3', '3,a,3', '3,b,3']]
++--------+--------+--------------+--------------+
+| Status | States | Transition a | Transition b |
++--------+--------+--------------+--------------+
+|        |   0    |     ---      |     ---      |
+|  -->   |   1    |      2       |      2       |
+|        |   2    |      0       |      3       |
+|  <--   |   3    |      3       |      3       |
++--------+--------+--------------+--------------+
+
+------------------------------------------------------------------------------------
+
+Please, enter the automaton id :
+
+27
+['a', 'b'] ['0', '1', '2'] ['1'] ['0'] ['1,a,2', '1,b,2', '2,b,0', '0,a,0', '0,b,0']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is already standardized
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b']
+Initial States : ['i']
+Final States : ['0']
+List of States : ['0', '1', '2', 'i']
+List of transitions : ['1,a,2', '1,b,2', '2,b,0', '0,a,0', '0,b,0', 'i,a,2', 'i,b,2']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+1 a 2
+1 b 2
+2 b 0
+0 a 0
+0 b 0
+Minimized DFA:
+['a', 'b'] ['0', '1', '2'] ['1'] ['0'] ['1,a,2', '1,b,2', '2,b,0', '0,a,0', '0,b,0']
+[['a', 'b'], ['0', '1', '2'], ['1'], ['0'], ['0,a,0', '0,b,0', '1,a,2', '1,b,2', '2,b,0']]
++--------+--------+--------------+--------------+
+| Status | States | Transition a | Transition b |
++--------+--------+--------------+--------------+
+|  <--   |   0    |      0       |      0       |
+|  -->   |   1    |      2       |      2       |
+|        |   2    |     ---      |      0       |
++--------+--------+--------------+--------------+
+------------------------------------------------------------------------------------
+Please, enter the automaton id :
+
+28
+['a'] ['0', '1', '2', '3', '4', '5'] ['1'] ['0', '3'] ['1,a,2', '1,a,4', '2,a,3', '3,a,2', '4,a,5', '5,a,0', '0,a,4']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is already standardized
+This is the standardized version of the automaton :
+
+Alphabet : ['a']
+Initial States : ['i']
+Final States : ['0', '3']
+List of States : ['0', '1', '2', '3', '4', '5', 'i']
+List of transitions : ['1,a,2', '1,a,4', '2,a,3', '3,a,2', '4,a,5', '5,a,0', '0,a,4', 'i,a,2', 'i,a,4']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+1 a 2
+1 a 4
+2 a 3
+3 a 2
+4 a 5
+5 a 0
+0 a 4
+Minimized DFA:
+['a'] ['0', '1', '2', '3', '4', '5'] ['1'] ['0', '3'] ['1,a,2', '1,a,4', '2,a,3', '3,a,2', '4,a,5', '5,a,0', '0,a,4']
+[['a'], ['0', '1', '4', '5'], ['1'], ['0'], ['0,a,4', '1,a,4', '4,a,5', '5,a,0']]
++--------+--------+--------------+
+| Status | States | Transition a |
++--------+--------+--------------+
+|  <--   |   0    |      4       |
+|  -->   |   1    |      4       |
+|        |   4    |      5       |
+|        |   5    |      0       |
++--------+--------+--------------+
+------------------------------------------------------------------------------------
+lease, enter the automaton id :
+
+29
+['a'] ['0', '1', '2', '3', '4', '5'] ['1'] ['0', '3'] ['1,a,2', '1,a,4', '2,a,3', '3,a,2', '4,a,5', '4,a,3', '5,a,0', '0,a,4']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is already standardized
+This is the standardized version of the automaton :
+
+Alphabet : ['a']
+Initial States : ['i']
+Final States : ['0', '3']
+List of States : ['0', '1', '2', '3', '4', '5', 'i']
+List of transitions : ['1,a,2', '1,a,4', '2,a,3', '3,a,2', '4,a,5', '4,a,3', '5,a,0', '0,a,4', 'i,a,2', 'i,a,4']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+1 a 2
+1 a 4
+2 a 3
+3 a 2
+4 a 5
+4 a 3
+5 a 0
+0 a 4
+Minimized DFA:
+['a'] ['0', '1', '2', '3', '4', '5'] ['1'] ['0', '3'] ['1,a,2', '1,a,4', '2,a,3', '3,a,2', '4,a,5', '4,a,3', '5,a,0', '0,a,4']
+[['a'], ['1', '2', '3', '4'], ['1'], ['3'], ['1,a,4', '2,a,3', '3,a,2', '4,a,3']]
++--------+--------+--------------+
+| Status | States | Transition a |
++--------+--------+--------------+
+|  -->   |   1    |      4       |
+|        |   2    |      3       |
+|  <--   |   3    |      2       |
+|        |   4    |      3       |
++--------+--------+--------------+
+------------------------------------------------------------------------------------
+Please, enter the automaton id :
+
+30
+['a'] ['0', '1', '2', '3', '4'] ['1'] ['0', '3', '4'] ['1,a,2', '2,a,3', '3,a,4', '4,a,0', '0,a,3']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is already standardized
+This is the standardized version of the automaton :
+
+Alphabet : ['a']
+Initial States : ['i']
+Final States : ['0', '3', '4']
+List of States : ['0', '1', '2', '3', '4', 'i']
+List of transitions : ['1,a,2', '2,a,3', '3,a,4', '4,a,0', '0,a,3', 'i,a,2'] 
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+1 a 2
+2 a 3
+3 a 4
+4 a 0
+0 a 3
+Minimized DFA:
+['a'] ['0', '1', '2', '3', '4'] ['1'] ['0', '3', '4'] ['1,a,2', '2,a,3', '3,a,4', '4,a,0', '0,a,3']
+[['a'], ['0', '1', '2', '3', '4'], ['1'], ['4', '0', '3'], ['0,a,3', '1,a,2', '2,a,3', '3,a,4', '4,a,0']]
++--------+--------+--------------+
+| Status | States | Transition a |
++--------+--------+--------------+
+|  <--   |   0    |      3       |
+|  -->   |   1    |      2       |
+|        |   2    |      3       |
+|  <--   |   3    |      4       |
+|  <--   |   4    |      0       |
++--------+--------+--------------+
+------------------------------------------------------------------------------------
+Please, enter the automaton id :
+
+31
+['a', 'b', 'ε'] ['0', '1', '2', '3', '4', '5', '6', '7'] ['0'] ['7'] ['0,ε,1', '0,ε,4', '1,a,2', '1,ε,3', '2,b,1', '2,a,3', '3,b,3', '3,ε,7', '4,b,5', '5,b,6', '6,ε,4', '6,ε,7']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is already standardized
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b', 'ε']
+Initial States : ['i']
+Final States : ['7']
+List of States : ['0', '1', '2', '3', '4', '5', '6', '7', 'i']
+List of transitions : ['0,ε,1', '0,ε,4', '1,a,2', '1,ε,3', '2,b,1', '2,a,3', '3,b,3', '3,ε,7', '4,b,5', '5,b,6', '6,ε,4', '6,ε,7', 'i,ε,1', 'i,ε,4']      
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+0 ε 1
+0 ε 4
+1 a 2
+1 ε 3
+2 b 1
+2 a 3
+3 b 3
+3 ε 7
+4 b 5
+5 b 6
+6 ε 4
+6 ε 7
+Minimized DFA:
+['a', 'b', 'ε'] ['0', '1', '2', '3', '4', '5', '6', '7'] ['0'] ['7'] ['0,ε,1', '0,ε,4', '1,a,2', '1,ε,3', '2,b,1', '2,a,3', '3,b,3', '3,ε,7', '4,b,5', '5,b,6', '6,ε,4', '6,ε,7']
+[['a', 'b', 'ε'], ['0', '4', '5', '6', '7'], ['0'], ['7'], ['0,ε,4', '4,b,5', '5,b,6', '6,ε,7']]
++--------+--------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition ε |
++--------+--------+--------------+--------------+--------------+
+|  -->   |   0    |     ---      |     ---      |      4       |
+|        |   4    |     ---      |      5       |     ---      |
+|        |   5    |     ---      |      6       |     ---      |
+|        |   6    |     ---      |     ---      |      7       |
+|  <--   |   7    |     ---      |     ---      |     ---      |
++--------+--------+--------------+--------------+--------------+
+------------------------------------------------------------------------------------
+Please, enter the automaton id :
+
+32
+['a', 'b', 'c', 'ε'] ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21'] ['0'] ['21'] ['0,ε,1', '0,ε,10', '1,ε,2', '1,ε,6', '2,ε,3', '2,ε,5', '3,b,4', '4,ε,3', '4,ε,5', '5,ε,8', '6,a,7', '7,ε,8', '8,c,9', '9,ε,21', '10,ε,11', '11,ε,12', '11,ε,14', '12,a,13', '13,ε,12', '13,ε,14', '14,ε,17', '15,b,16', '16,ε,17', '17,ε,18', '17,ε,20', '18,c,19', '19,ε,18', '19,ε,20', '20,ε,21']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is already standardized
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b', 'c', 'ε']
+Initial States : ['i']
+Final States : ['21']
+List of States : ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', 'i']
+List of transitions : ['0,ε,1', '0,ε,10', '1,ε,2', '1,ε,6', '2,ε,3', '2,ε,5', '3,b,4', '4,ε,3', '4,ε,5', '5,ε,8', '6,a,7', '7,ε,8', '8,c,9', '9,ε,21', '10,ε,11', '11,ε,12', '11,ε,14', '12,a,13', '13,ε,12', '13,ε,14', '14,ε,17', '15,b,16', '16,ε,17', '17,ε,18', '17,ε,20', '18,c,19', '19,ε,18', '19,ε,20', '20,ε,21', 'i,ε,1', 'i,ε,10']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+0 ε 1
+0 ε 10
+1 ε 2
+1 ε 6
+2 ε 3
+2 ε 5
+3 b 4
+4 ε 3
+4 ε 5
+5 ε 8
+6 a 7
+7 ε 8
+8 c 9
+9 ε 21
+10 ε 11
+11 ε 12
+11 ε 14
+12 a 13
+13 ε 12
+13 ε 14
+14 ε 17
+15 b 16
+16 ε 17
+17 ε 18
+17 ε 20
+18 c 19
+19 ε 18
+19 ε 20
+20 ε 21
+Minimized DFA:
+['a', 'b', 'c', 'ε'] ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21'] ['0'] ['21'] ['0,ε,1', '0,ε,10', '1,ε,2', '1,ε,6', '2,ε,3', '2,ε,5', '3,b,4', '4,ε,3', '4,ε,5', '5,ε,8', '6,a,7', '7,ε,8', '8,c,9', '9,ε,21', '10,ε,11', '11,ε,12', '11,ε,14', '12,a,13', '13,ε,12', '13,ε,14', '14,ε,17', '15,b,16', '16,ε,17', '17,ε,18', '17,ε,20', '18,c,19', '19,ε,18', '19,ε,20', '20,ε,21']
+[['a', 'b', 'c', 'ε'], ['0', '10', '11', '14', '17', '20', '21'], ['0'], ['21'], ['0,ε,10', '10,ε,11', '11,ε,14', '14,ε,17', '17,ε,20', '20,ε,21']]       
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition ε |
++--------+--------+--------------+--------------+--------------+--------------+
+|  -->   |   0    |     ---      |     ---      |     ---      |      10      |
+|        |   10   |     ---      |     ---      |     ---      |      11      |
+|        |   11   |     ---      |     ---      |     ---      |      14      |
+|        |   14   |     ---      |     ---      |     ---      |      17      |
+|        |   17   |     ---      |     ---      |     ---      |      20      |
+|        |   20   |     ---      |     ---      |     ---      |      21      |
+|  <--   |   21   |     ---      |     ---      |     ---      |     ---      |
++--------+--------+--------------+--------------+--------------+--------------+
+------------------------------------------------------------------------------------
+Please, enter the automaton id :
+
+33
+['a', 'b', 'c', 'ε'] ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'] ['0'] ['12'] ['0,ε,1', '0,ε,7', '1,ε,2', '1,ε,4', '2,a,3', '3,ε,5', '4,b,4', '4,ε,5', '5,c,6', '6,ε,12', '7,ε,8', '7,ε,9', '8,a,8', '8,ε,11', '9,b,10', '10,ε,11', '11,c,11', '11,ε,12']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is already standardized
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b', 'c', 'ε']
+Initial States : ['i']
+Final States : ['12']
+List of States : ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'i']
+List of transitions : ['0,ε,1', '0,ε,7', '1,ε,2', '1,ε,4', '2,a,3', '3,ε,5', '4,b,4', '4,ε,5', '5,c,6', '6,ε,12', '7,ε,8', '7,ε,9', '8,a,8', '8,ε,11', '9,b,10', '10,ε,11', '11,c,11', '11,ε,12', 'i,ε,1', 'i,ε,7']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+0 ε 1
+0 ε 7
+1 ε 2
+1 ε 4
+2 a 3
+3 ε 5
+4 b 4
+4 ε 5
+5 c 6
+6 ε 12
+7 ε 8
+7 ε 9
+8 a 8
+8 ε 11
+9 b 10
+10 ε 11
+11 c 11
+11 ε 12
+Minimized DFA:
+['a', 'b', 'c', 'ε'] ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'] ['0'] ['12'] ['0,ε,1', '0,ε,7', '1,ε,2', '1,ε,4', '2,a,3', '3,ε,5', '4,b,4', '4,ε,5', '5,c,6', '6,ε,12', '7,ε,8', '7,ε,9', '8,a,8', '8,ε,11', '9,b,10', '10,ε,11', '11,c,11', '11,ε,12']
+[['a', 'b', 'c', 'ε'], ['0', '7', '9', '10', '11', '12'], ['0'], ['12'], ['0,ε,7', '7,ε,9', '9,b,10', '10,ε,11', '11,c,11', '11,ε,12']]
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition ε |
++--------+--------+--------------+--------------+--------------+--------------+
+|  -->   |   0    |     ---      |     ---      |     ---      |      7       |
+|        |   7    |     ---      |     ---      |     ---      |      9       |
+|        |   9    |     ---      |      10      |     ---      |     ---      |
+|        |   10   |     ---      |     ---      |     ---      |      11      |
+|        |   11   |     ---      |     ---      |      11      |      12      |
+|  <--   |   12   |     ---      |     ---      |     ---      |     ---      |
++--------+--------+--------------+--------------+--------------+--------------+
+
+------------------------------------------------------------------------------------
+Please, enter the automaton id :
+
+34
+['a', 'b', 'ε'] ['0', '1', '2', '3', '4', '5', '6'] ['0'] ['6'] ['0,ε,1', '0,ε,4', '1,a,2', '1,ε,2', '2,b,3', '3,ε,2', '3,ε,6', '4,b,5', '5,ε,4', '5,ε,6']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is already standardized
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b', 'ε']
+Initial States : ['i']
+Final States : ['6']
+List of States : ['0', '1', '2', '3', '4', '5', '6', 'i']
+List of transitions : ['0,ε,1', '0,ε,4', '1,a,2', '1,ε,2', '2,b,3', '3,ε,2', '3,ε,6', '4,b,5', '5,ε,4', '5,ε,6', 'i,ε,1', 'i,ε,4']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+0 ε 1
+0 ε 4
+1 a 2
+1 ε 2
+2 b 3
+3 ε 2
+3 ε 6
+4 b 5
+5 ε 4
+5 ε 6
+Minimized DFA:
+['a', 'b', 'ε'] ['0', '1', '2', '3', '4', '5', '6'] ['0'] ['6'] ['0,ε,1', '0,ε,4', '1,a,2', '1,ε,2', '2,b,3', '3,ε,2', '3,ε,6', '4,b,5', '5,ε,4', '5,ε,6']
+[['a', 'b', 'ε'], ['0', '4', '5', '6'], ['0'], ['6'], ['0,ε,4', '4,b,5', '5,ε,6']]
++--------+--------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition ε |
++--------+--------+--------------+--------------+--------------+
+|  -->   |   0    |     ---      |     ---      |      4       |
+|        |   4    |     ---      |      5       |     ---      |
+|        |   5    |     ---      |     ---      |      6       |
+|  <--   |   6    |     ---      |     ---      |     ---      |
++--------+--------+--------------+--------------+--------------+
+------------------------------------------------------------------------------------
+Please, enter the automaton id :
+
+35
+['a', 'b', 'ε'] ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'] ['0'] ['10'] ['0,ε,1', '0,ε,4', '1,a,2', '2,b,3', '3,ε,10', '4,ε,5', '4,ε,8', '5,a,6', '6,b,7', '7,ε,5', '7,ε,8', '8,a,9', '9,ε,10']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is already standardized
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b', 'ε']
+Initial States : ['i']
+Final States : ['10']
+List of States : ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'i']
+List of transitions : ['0,ε,1', '0,ε,4', '1,a,2', '2,b,3', '3,ε,10', '4,ε,5', '4,ε,8', '5,a,6', '6,b,7', '7,ε,5', '7,ε,8', '8,a,9', '9,ε,10', 'i,ε,1', 'i,ε,4']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+0 ε 1
+0 ε 4
+1 a 2
+2 b 3
+3 ε 10
+4 ε 5
+4 ε 8
+5 a 6
+6 b 7
+7 ε 5
+7 ε 8
+8 a 9
+9 ε 10
+Minimized DFA:
+['a', 'b', 'ε'] ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'] ['0'] ['10'] ['0,ε,1', '0,ε,4', '1,a,2', '2,b,3', '3,ε,10', '4,ε,5', '4,ε,8', '5,a,6', '6,b,7', '7,ε,5', '7,ε,8', '8,a,9', '9,ε,10']
+[['a', 'b', 'ε'], ['0', '4', '8', '9', '10'], ['0'], ['10'], ['0,ε,4', '4,ε,8', '8,a,9', '9,ε,10']]
++--------+--------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition ε |
++--------+--------+--------------+--------------+--------------+
+|  -->   |   0    |     ---      |     ---      |      4       |
+|        |   4    |     ---      |     ---      |      8       |
+|        |   8    |      9       |     ---      |     ---      |
+|        |   9    |     ---      |     ---      |      10      |
+|  <--   |   10   |     ---      |     ---      |     ---      |
++--------+--------+--------------+--------------+--------------+
+------------------------------------------------------------------------------------
+Please, enter the automaton id :
+
+36
+['a', 'b'] ['0', '1', '2'] ['0', '2'] ['1', '2'] ['0,a,1', '0,b,1', '0,b,2', '1,b,0', '1,b,2', '2,a,0', '2,a,1']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is not standardized, creating a new version now :
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b']
+Initial States : ['i']
+Final States : ['1', '2']
+List of States : ['0', '1', '2', 'i']
+List of transitions : ['0,a,1', '0,b,1', '0,b,2', '1,b,0', '1,b,2', '2,a,0', '2,a,1', 'i,a,1', 'i,b,1', 'i,b,2', 'i,a,0']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+0 a 1
+0 b 1
+0 b 2
+1 b 0
+1 b 2
+2 a 0
+2 a 1
+Minimized DFA:
+['a', 'b'] ['0', '1', '2'] ['0', '2'] ['1', '2'] ['0,a,1', '0,b,1', '0,b,2', '1,b,0', '1,b,2', '2,a,0', '2,a,1']
+[['a', 'b'], ['0', '1', '2'], ['2', '0'], ['2', '1'], ['0,a,1', '0,b,2', '1,b,2', '2,a,1']]
++--------+--------+--------------+--------------+
+| Status | States | Transition a | Transition b |
++--------+--------+--------------+--------------+
+|  -->   |   0    |      1       |      2       |
+|  <--   |   1    |     ---      |      2       |
+|  <-->  |   2    |      1       |     ---      |
++--------+--------+--------------+--------------+
+------------------------------------------------------------------------------------
+Please, enter the automaton id :
+
+37
+['a', 'b'] ['0', '1', '2', '3', '4'] ['0'] ['0', '1', '2', '3', '4'] ['0,a,1', '0,b,3', '1,a,2', '1,b,4', '2,b,0', '3,a,1', '3,b,0', '4,a,1']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is not standardized, creating a new version now :
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b']
+Initial States : ['i']
+Final States : ['0', '1', '2', '3', '4']
+List of States : ['0', '1', '2', '3', '4', 'i']
+List of transitions : ['0,a,1', '0,b,3', '1,a,2', '1,b,4', '2,b,0', '3,a,1', '3,b,0', '4,a,1', 'i,a,1', 'i,b,3']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+0 a 1
+0 b 3
+1 a 2
+1 b 4
+2 b 0
+3 a 1
+3 b 0
+4 a 1
+Minimized DFA:
+['a', 'b'] ['0', '1', '2', '3', '4'] ['0'] ['0', '1', '2', '3', '4'] ['0,a,1', '0,b,3', '1,a,2', '1,b,4', '2,b,0', '3,a,1', '3,b,0', '4,a,1']
+[['a', 'b'], ['0', '1', '2', '3', '4'], ['0'], ['1', '0', '4', '2', '3'], ['0,a,1', '0,b,3', '1,a,2', '1,b,4', '2,b,0', '3,a,1', '3,b,0', '4,a,1']]       
++--------+--------+--------------+--------------+
+| Status | States | Transition a | Transition b |
++--------+--------+--------------+--------------+
+|  <-->  |   0    |      1       |      3       |
+|  <--   |   1    |      2       |      4       |
+|  <--   |   2    |     ---      |      0       |
+|  <--   |   3    |      1       |      0       |
+|  <--   |   4    |      1       |     ---      |
++--------+--------+--------------+--------------+
+------------------------------------------------------------------------------------
+Please, enter the automaton id :
+
+38
+['a', 'b'] ['0', '1', '2', '3'] ['0'] ['0', '1', '3'] ['0,a,1', '0,b,3', '1,a,1', '1,b,2', '2,a,3', '2,b,3', '3,a,3', '3,b,3']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is already standardized
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b']
+Initial States : ['i']
+Final States : ['0', '1', '3']
+List of States : ['0', '1', '2', '3', 'i']
+List of transitions : ['0,a,1', '0,b,3', '1,a,1', '1,b,2', '2,a,3', '2,b,3', '3,a,3', '3,b,3', 'i,a,1', 'i,b,3']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+0 a 1
+0 b 3
+1 a 1
+1 b 2
+2 a 3
+2 b 3
+3 a 3
+3 b 3
+Minimized DFA:
+['a', 'b'] ['0', '1', '2', '3'] ['0'] ['0', '1', '3'] ['0,a,1', '0,b,3', '1,a,1', '1,b,2', '2,a,3', '2,b,3', '3,a,3', '3,b,3']
+[['a', 'b'], ['0', '1', '2', '3'], ['0'], ['1', '3', '0'], ['0,a,1', '0,b,3', '1,a,1', '1,b,2', '2,a,3', '2,b,3', '3,a,3', '3,b,3']]
++--------+--------+--------------+--------------+
+| Status | States | Transition a | Transition b |
++--------+--------+--------------+--------------+
+|  <-->  |   0    |      1       |      3       |
+|  <--   |   1    |      1       |      2       |
+|        |   2    |      3       |      3       |
+|  <--   |   3    |      3       |      3       |
++--------+--------+--------------+--------------+
+------------------------------------------------------------------------------------
+Please, enter the automaton id :
+
+39
+['a', 'b'] ['0', '1', '2', '3'] ['0', '1', '3'] ['1'] ['0,a,1', '0,b,2', '1,a,1', '1,b,2', '2,a,0', '2,b,1', '3,a,1', '3,a,2']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is not standardized, creating a new version now :
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b']
+Initial States : ['i']
+Final States : ['1']
+List of States : ['0', '1', '2', '3', 'i']
+List of transitions : ['0,a,1', '0,b,2', '1,a,1', '1,b,2', '2,a,0', '2,b,1', '3,a,1', '3,a,2', 'i,a,1', 'i,b,2', 'i,a,2']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+0 a 1
+0 b 2
+1 a 1
+1 b 2
+2 a 0
+2 b 1
+3 a 1
+3 a 2
+Minimized DFA:
+['a', 'b'] ['0', '1', '2', '3'] ['0', '1', '3'] ['1'] ['0,a,1', '0,b,2', '1,a,1', '1,b,2', '2,a,0', '2,b,1', '3,a,1', '3,a,2']
+[['a', 'b'], ['0', '1', '2', '3'], ['1', '0', '3'], ['1'], ['0,a,1', '0,b,2', '1,a,1', '1,b,2', '2,a,0', '2,b,1', '3,a,2']]
++--------+--------+--------------+--------------+
+| Status | States | Transition a | Transition b |
++--------+--------+--------------+--------------+
+|  -->   |   0    |      1       |      2       |
+|  <-->  |   1    |      1       |      2       |
+|        |   2    |      0       |      1       |
+|  -->   |   3    |      2       |     ---      |
++--------+--------+--------------+--------------+
+------------------------------------------------------------------------------------
+Please, enter the automaton id :
+
+40
+['a', 'b'] ['0', '1', '2'] ['0', '1'] ['0', '2'] ['0,b,1', '0,b,2', '1,a,0', '1,a,2', '1,b,2', '2,a,0']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is not standardized, creating a new version now :
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b']
+Initial States : ['i']
+Final States : ['0', '2']
+List of States : ['0', '1', '2', 'i']
+List of transitions : ['0,b,1', '0,b,2', '1,a,0', '1,a,2', '1,b,2', '2,a,0', 'i,b,1', 'i,b,2', 'i,a,0', 'i,a,2']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+0 b 1
+0 b 2
+1 a 0
+1 a 2
+1 b 2
+2 a 0
+Minimized DFA:
+['a', 'b'] ['0', '1', '2'] ['0', '1'] ['0', '2'] ['0,b,1', '0,b,2', '1,a,0', '1,a,2', '1,b,2', '2,a,0']
+[['a', 'b'], ['0', '1', '2'], ['1', '0'], ['2', '0'], ['0,b,2', '1,a,2', '1,b,2', '2,a,0']]
++--------+--------+--------------+--------------+
+| Status | States | Transition a | Transition b |
++--------+--------+--------------+--------------+
+|  <-->  |   0    |     ---      |      2       |
+|  -->   |   1    |      2       |      2       |
+|  <--   |   2    |      0       |     ---      |
++--------+--------+--------------+--------------+
+
+
+------------------------------------------------------------------------------------
+Please, enter the automaton id :
+
+41
+['a', 'b'] ['0', '1', '2', '3', '4', '5'] ['0'] ['1', '2', '3', '4'] ['0,a,1', '0,b,4', '1,a,2', '1,b,3', '2,a,2', '2,b,3', '3,a,5', '3,b,5', '4,a,5', '4,b,5', '5,a,5', '5,b,5']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate      
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA        
+6. Word Recognition
+7. Obtain a complementary automate        
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is already standardized    
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b']
+Initial States : ['i']
+Final States : ['1', '2', '3', '4']       
+List of States : ['0', '1', '2', '3', '4', '5', 'i']
+List of transitions : ['0,a,1', '0,b,4', '1,a,2', '1,b,3', '2,a,2', '2,b,3', '3,a,5', '3,b,5', '4,a,5', '4,b,5', '5,a,5', '5,b,5', 'i,a,1', 'i,b,4']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate      
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA        
+6. Word Recognition
+7. Obtain a complementary automate        
+8. Quit
+
+Your choice :
+ -> 5
+0 a 1
+0 b 4
+1 a 2
+1 b 3
+2 a 2
+2 b 3
+3 a 5
+3 b 5
+4 a 5
+4 b 5
+5 a 5
+5 b 5
+Minimized DFA:
+['a', 'b'] ['0', '1', '2', '3', '4', '5'] ['0'] ['1', '2', '3', '4'] ['0,a,1', '0,b,4', '1,a,2', '1,b,3', '2,a,2', '2,b,3', '3,a,5', '3,b,5', '4,a,5', '4,b,5', '5,a,5', '5,b,5']
+[['a', 'b'], ['0', '1', '2', '3', '4', '5'], ['0'], ['1', '2', '4', '3'], ['0,a,1', '0,b,4', '1,a,2', '1,b,3', '2,a,2', '2,b,3', '3,a,5', '3,b,5', '4,a,5', '4,b,5', '5,a,5', '5,b,5']]
++--------+--------+--------------+--------------+
+| Status | States | Transition a | Transition b |
++--------+--------+--------------+--------------+
+|  -->   |   0    |      1       |      4       |
+|  <--   |   1    |      2       |      3       |
+|  <--   |   2    |      2       |      3       |
+|  <--   |   3    |      5       |      5       |
+|  <--   |   4    |      5       |      5       |
+|        |   5    |      5       |      5       |
++--------+--------+--------------+--------------+
+
+------------------------------------------------------------------------------------
+Please, enter the automaton id :
+
+42
+['a', 'b', 'c'] ['0', '1', '2', '3', '4'] ['1'] ['1'] ['1,b,2', '1,a,0', '0,b,1', '0,a,3', '0,c,3', '2,a,1', '2,b,4', '2,c,4', '3,a,3', '3,b,3', '3,c,3', '4,a,4', '4,b,4', '4,c,4']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate      
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA        
+6. Word Recognition
+7. Obtain a complementary automate        
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is not standardized, creating a new version now :
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b', 'c']
+Initial States : ['i']
+Final States : ['1']
+List of States : ['0', '1', '2', '3', '4', 'i']
+List of transitions : ['1,b,2', '1,a,0', '0,b,1', '0,a,3', '0,c,3', '2,a,1', '2,b,4', '2,c,4', '3,a,3', '3,b,3', '3,c,3', '4,a,4', '4,b,4', '4,c,4', 'i,b,2', 'i,a,0']  
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate      
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA        
+6. Word Recognition
+7. Obtain a complementary automate        
+8. Quit
+
+Your choice :
+ -> 5
+1 b 2
+1 a 0
+0 b 1
+0 a 3
+0 c 3
+2 a 1
+2 b 4
+2 c 4
+3 a 3
+3 b 3
+3 c 3
+4 a 4
+4 b 4
+4 c 4
+| Status | States | Transition a | Transition b | Transition c |
++--------+--------+--------------+--------------+--------------+
+|        |   0    |      3       |      1       |      3       |
+|  <-->  |   1    |      0       |      2       |     ---      |
+|        |   2    |      1       |      4       |      4       |
+|        |   3    |      3       |      3       |      3       |
+|        |   4    |      4       |      4       |      4       |
++--------+--------+--------------+--------------+--------------+
+------------------------------------------------------------------------------------
+Please, enter the automaton id :
+
+43
+['a', 'b'] ['0', '1', '2'] ['0'] ['2'] ['0,a,0', '0,b,0', '0,b,1', '1,a,2', '2,a,2', '2,b,2']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is not standardized, creating a new version now :
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b']
+Initial States : ['i']
+Final States : ['2']
+List of States : ['0', '1', '2', 'i']
+List of transitions : ['0,a,0', '0,b,0', '0,b,1', '1,a,2', '2,a,2', '2,b,2', 'i,a,0', 'i,b,0', 'i,b,1']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+0 a 0
+0 b 0
+0 b 1
+1 a 2
+2 a 2
+2 b 2
+Minimized DFA:
+['a', 'b'] ['0', '1', '2'] ['0'] ['2'] ['0,a,0', '0,b,0', '0,b,1', '1,a,2', '2,a,2', '2,b,2']
+[['a', 'b'], ['0', '1', '2'], ['0'], ['2'], ['0,a,0', '0,b,1', '1,a,2', '2,a,2', '2,b,2']]
++--------+--------+--------------+--------------+
+| Status | States | Transition a | Transition b |
++--------+--------+--------------+--------------+
+|  -->   |   0    |      0       |      1       |
+|        |   1    |      2       |     ---      |
+|  <--   |   2    |      2       |      2       |
++--------+--------+--------------+--------------+
+------------------------------------------------------------------------------------
+Please, enter the automaton id :
+
+44
+['a', 'b'] ['0', '1', '2', '3'] ['0'] ['3', '2'] ['0,a,1', '0,a,2', '0,b,2', '1,b,3', '3,a,3', '3,b,3', '3,a,2', '3,b,2', '2,b,2']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is already standardized
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b']
+Initial States : ['i']
+Final States : ['3', '2']
+List of States : ['0', '1', '2', '3', 'i']
+List of transitions : ['0,a,1', '0,a,2', '0,b,2', '1,b,3', '3,a,3', '3,b,3', '3,a,2', '3,b,2', '2,b,2', 'i,a,1', 'i,a,2', 'i,b,2']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+0 a 1
+0 a 2
+0 b 2
+1 b 3
+3 a 3
+3 b 3
+3 a 2
+3 b 2
+2 b 2
+Minimized DFA:
+['a', 'b'] ['0', '1', '2', '3'] ['0'] ['3', '2'] ['0,a,1', '0,a,2', '0,b,2', '1,b,3', '3,a,3', '3,b,3', '3,a,2', '3,b,2', '2,b,2']
+[['a', 'b'], ['0', '2'], ['0'], ['2'], ['0,a,2', '0,b,2', '2,b,2']]
++--------+--------+--------------+--------------+
+| Status | States | Transition a | Transition b |
++--------+--------+--------------+--------------+
+|  -->   |   0    |      2       |      2       |
+|  <--   |   2    |     ---      |      2       |
++--------+--------+--------------+--------------+
+
+

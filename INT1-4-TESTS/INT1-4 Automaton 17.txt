@@ -1,0 +1,109 @@
+Please, enter the automaton id :
+
+17
+['a', 'b', 'c', 'd'] ['0', '1', '2', '3', '4', '5'] ['1', '2', '3', '4'] ['5'] ['1,a,2', '1,a,1', '2,b,2', '2,b,3', '3,c,3', '3,c,4', '4,d,4', '4,d,5', '5,a,0', '5,b,0', '5,c,0', '5,d,0']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is not standardized, creating a new version now :
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b', 'c', 'd']
+Initial States : ['i']
+Final States : ['5']
+List of States : ['0', '1', '2', '3', '4', '5', 'i']
+List of transitions : ['1,a,2', '1,a,1', '2,b,2', '2,b,3', '3,c,3', '3,c,4', '4,d,4', '4,d,5', '5,a,0', '5,b,0', '5,c,0', '5,d,0', 'i,a,2', 'i,a,1', 'i,b,2', 'i,b,3', 'i,c,3', 'i,c,4', 'i,d,4', 'i,d,5']
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition d |
++--------+--------+--------------+--------------+--------------+--------------+
+|        |   0    |     ---      |     ---      |     ---      |     ---      |
+|        |   1    |     2,1      |     ---      |     ---      |     ---      |
+|        |   2    |     ---      |     2,3      |     ---      |     ---      |
+|        |   3    |     ---      |     ---      |     3,4      |     ---      |
+|        |   4    |     ---      |     ---      |     ---      |     4,5      |
+|  <--   |   5    |      0       |      0       |      0       |      0       |
+|  -->   |   i    |     2,1      |     2,3      |     3,4      |     4,5      |
++--------+--------+--------------+--------------+--------------+--------------+
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 4
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition d |
++--------+--------+--------------+--------------+--------------+--------------+
+|  -->   |  1234  |      21      |      23      |      34      |      45      |
+|        |   21   |      21      |      23      |      P       |      P       |
+|  -->   |   23   |      P       |      23      |      34      |      P       |
+|  -->   |   34   |      P       |      P       |      34      |      45      |
+|  <--   |   45   |      0       |      0       |      0       |     450      |
+|        |   0    |      P       |      P       |      P       |      P       |
+|  <--   |  450   |      0       |      0       |      0       |     450      |
+|        |   P    |      P       |      P       |      P       |      P       |
++--------+--------+--------------+--------------+--------------+--------------+
+
+Press to continue
+5
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+Minimized DFA:
+['a', 'b', 'c', 'd'] ['1234', '21', '23', '34', '45', '0', '450', 'P'] 1234 ['45', '450'] ['1234,a,21', '1234,b,23', '1234,c,34', '1234,d,45', '21,a,21', '21,b,23', '23,b,23', '23,c,34', '34,c,34', '34,d,45', '45,a,0', '45,b,0', '45,c,0', '45,d,450', '450,a,0', '450,b,0', '450,c,0', '450,d,450', 'P,a,P', 
+'P,b,P', 'P,c,P', 'P,d,P', '21,c,P', '21,d,P', '23,a,P', '23,d,P', '34,a,P', '34,b,P', '0,a,P', '0,b,P', '0,c,P', '0,d,P']
+[['a', 'b', 'c', 'd'], ['1234', '21', '23', '34', '45', '0', '450', 'P'], ['23', '34', '1234'], ['450', '45'], ['1234,a,21', '1234,b,23', '1234,c,34', '1234,d,45', '21,a,21', '21,b,23', '21,c,P', '21,d,P', '23,b,23', '23,c,34', '23,a,P', '23,d,P', '34,c,34', '34,d,45', '34,a,P', '34,b,P', '45,a,0', '45,b,0', '45,c,0', '45,d,450', '0,a,P', '0,b,P', '0,c,P', '0,d,P', '450,a,0', '450,b,0', '450,c,0', '450,d,450', 'P,a,P', 'P,b,P', 'P,c,P', 'P,d,P']]
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition d |
++--------+--------+--------------+--------------+--------------+--------------+
+|  -->   |  1234  |      21      |      23      |      34      |      45      |
+|        |   21   |      21      |      23      |      P       |      P       |
+|  -->   |   23   |      P       |      23      |      34      |      P       |
+|  -->   |   34   |      P       |      P       |      34      |      45      |
+|  <--   |   45   |      0       |      0       |      0       |     450      |
+|        |   0    |      P       |      P       |      P       |      P       |
+|  <--   |  450   |      0       |      0       |      0       |     450      |
+|        |   P    |      P       |      P       |      P       |      P       |
++--------+--------+--------------+--------------+--------------+--------------+
+

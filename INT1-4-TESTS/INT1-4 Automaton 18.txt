@@ -1,0 +1,87 @@
+Please, enter the automaton id :
+
+18
+['a', 'b', 'c', 'd'] ['0', '1', '2', '3', '4'] ['1'] ['0'] ['1,a,2', '1,b,3', '1,c,4', '1,d,0', '2,a,2', '2,b,3', '2,c,4', '2,d,0', '3,b,3', '3,d,0', '3,c,4', '4,c,4', '4,c,0']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is already standardized
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 4
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition d |
++--------+--------+--------------+--------------+--------------+--------------+
+|  -->   |   1    |      2       |      3       |      4       |      0       |
+|        |   2    |      2       |      3       |      4       |      0       |
+|        |   3    |      P       |      3       |      4       |      0       |
+|        |   4    |      P       |      P       |      40      |      P       |
+|  <--   |   0    |      P       |      P       |      P       |      P       |
+|  <--   |   40   |      P       |      P       |      40      |      P       |
+|        |   P    |      P       |      P       |      P       |      P       |
++--------+--------+--------------+--------------+--------------+--------------+
+
+Press to continue
+5
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+Minimized DFA:
+['a', 'b', 'c', 'd'] ['1', '2', '3', '4', '0', '40', 'P'] 1 ['0', '40'] ['1,a,2', '1,b,3', '1,c,4', '1,d,0', '2,a,2', '2,b,3', '2,c,4', '2,d,0', '3,b,3', '3,c,4', '3,d,0', '4,c,40', '40,c,40', 'P,a,P', 'P,b,P', 'P,c,P', 'P,d,P', '3,a,P', '4,a,P', '4,b,P', '4,d,P', '0,a,P', '0,b,P', '0,c,P', '0,d,P', '40,a,P', '40,b,P', '40,d,P']
+[['a', 'b', 'c', 'd'], ['1', '2', '3', '4', '0', '40', 'P'], ['1'], ['40', '0'], ['1,a,2', '1,b,3', '1,c,4', '1,d,0', '2,a,2', '2,b,3', '2,c,4', '2,d,0', '3,b,3', '3,c,4', '3,d,0', '3,a,P', '4,c,40', '4,a,P', '4,b,P', '4,d,P', '0,a,P', '0,b,P', '0,c,P', '0,d,P', '40,c,40', '40,a,P', '40,b,P', '40,d,P', 'P,a,P', 'P,b,P', 'P,c,P', 'P,d,P']]
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition d |
++--------+--------+--------------+--------------+--------------+--------------+
+|  -->   |   1    |      2       |      3       |      4       |      0       |
+|        |   2    |      2       |      3       |      4       |      0       |
+|        |   3    |      P       |      3       |      4       |      0       |
+|        |   4    |      P       |      P       |      40      |      P       |
+|  <--   |   0    |      P       |      P       |      P       |      P       |
+|  <--   |   40   |      P       |      P       |      40      |      P       |
+|        |   P    |      P       |      P       |      P       |      P       |
++--------+--------+--------------+--------------+--------------+--------------+

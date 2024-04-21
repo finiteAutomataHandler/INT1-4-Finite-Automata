@@ -1,0 +1,88 @@
+
+Please, enter the automaton id :
+
+9
+['a', 'b'] ['0', '1', '2', '3', '4', '5'] ['1'] ['0', '1'] ['1,a,2', '2,a,3', '2,b,3', '3,a,4', '4,a,5', '4,b,5', '5,a,0', '0,a,2']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is already standardized
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 4
++--------+--------+--------------+--------------+
+| Status | States | Transition a | Transition b |
++--------+--------+--------------+--------------+
+|  <--   |   0    |      2       |      P       |
+|  <-->  |   1    |      2       |      P       |
+|        |   2    |      3       |      3       |
+|        |   3    |      4       |      P       |
+|        |   4    |      5       |      5       |
+|        |   5    |      0       |      P       |
+|        |   P    |      P       |      P       |
++--------+--------+--------------+--------------+
+
+Press to continue
+5
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+Minimized DFA:
+['a', 'b'] ['0', '1', '2', '3', '4', '5', 'P'] ['1'] ['0', '1'] ['1,a,2', '2,a,3', '2,b,3', '3,a,4', '4,a,5', '4,b,5', '5,a,0', '0,a,2', 'P,a,P', 'P,b,P', '0,b,P', '1,b,P', '3,b,P', '5,b,P']
+[['a', 'b'], ['0', '1', '2', '3', '4', '5', 'P'], ['1'], ['1', '0'], ['0,a,2', '0,b,P', '1,a,2', '1,b,P', '2,a,3', '2,b,3', '3,a,4', '3,b,P', '4,a,5', '4,b,5', '5,a,0', '5,b,P', 'P,a,P', 'P,b,P']]
++--------+--------+--------------+--------------+
+| Status | States | Transition a | Transition b |
++--------+--------+--------------+--------------+
+|  <--   |   0    |      2       |      P       |
+|  <-->  |   1    |      2       |      P       |
+|        |   2    |      3       |      3       |
+|        |   3    |      4       |      P       |
+|        |   4    |      5       |      5       |
+|        |   5    |      0       |      P       |
+|        |   P    |      P       |      P       |
++--------+--------+--------------+--------------+

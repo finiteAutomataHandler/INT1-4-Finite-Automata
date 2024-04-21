@@ -100,22 +100,23 @@ if __name__ == '__main__':
                 print("This automaton is already standardized")
             else:
                 print("This automaton is not standardized, creating a new version now :")
-            std_alphabet, std_states, std_initialStates, std_finalStates, std_listTransitions = standardizeAutomaton(
+                std_alphabet, std_states, std_initialStates, std_finalStates, std_listTransitions = standardizeAutomaton(
                 alphabet, states, initialStates, finalStates, listTransitions)
+                displayAutomaton(std_alphabet, std_states, std_initialStates, std_finalStates, std_listTransitions)
 
-            break
+            input("\nPress to continue\n")
 
         elif choice == "4":
 
             #1. Check if deterministic and complete else determinize if necessary then complete
             deterministic = isDeterministic(alphabet, states, initialStates, listTransitions)
-        complete = isComplete(alphabet, states, finalStates, listTransitions)
+            complete = isComplete(alphabet, states, finalStates, listTransitions)
         
-        if not (deterministic and complete):
-            if not deterministic:
-                alphabet, states, initialStates, finalStates, listTransitions = determinize(alphabet, states, initialStates, finalStates, listTransitions)
-            if not complete:
-                alphabet, states, initialStates, finalStates, listTransitions = completeAutomaton(alphabet, states, initialStates, finalStates, listTransitions)
+            if not (deterministic and complete):
+                if not deterministic:
+                    alphabet, states, initialStates, finalStates, listTransitions = determinize(alphabet, states, initialStates, finalStates, listTransitions)
+                if not complete:
+                    alphabet, states, initialStates, finalStates, listTransitions = completeAutomaton(alphabet, states, initialStates, finalStates, listTransitions)
             
             displayAutomaton(alphabet, states, initialStates, finalStates, listTransitions)
 

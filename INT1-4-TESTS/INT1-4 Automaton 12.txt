@@ -1,0 +1,86 @@
+Please, enter the automaton id :
+
+12
+['a', 'b', 'c', 'd'] ['0', '1'] ['1'] ['1'] ['1,a,1', '1,c,0', '0,b,0', '0,d,1']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is not standardized, creating a new version now :
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b', 'c', 'd']
+Initial States : ['i']
+Final States : ['1']
+List of States : ['0', '1', 'i']
+List of transitions : ['1,a,1', '1,c,0', '0,b,0', '0,d,1', 'i,a,1', 'i,c,0']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 4
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition d |
++--------+--------+--------------+--------------+--------------+--------------+
+|        |   0    |      P       |      0       |      P       |      1       |
+|  <-->  |   1    |      1       |      P       |      0       |      P       |
+|        |   P    |      P       |      P       |      P       |      P       |
++--------+--------+--------------+--------------+--------------+--------------+
+
+Press to continue
+5
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+Minimized DFA:
+['a', 'b', 'c', 'd'] ['0', '1', 'P'] ['1'] ['1'] ['1,a,1', '1,c,0', '0,b,0', '0,d,1', 'P,a,P', '0,a,P', 'P,b,P', 'P,c,P', '0,c,P', 'P,d,P', '1,b,P', '1,d,P']
+[['a', 'b', 'c', 'd'], ['0', '1', 'P'], ['1'], ['1'], ['0,b,0', '0,d,1', '0,a,P', '0,c,P', '1,a,1', '1,c,0', '1,b,P', '1,d,P', 'P,a,P', 'P,b,P', 'P,c,P', 'P,d,P']]
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition d |
++--------+--------+--------------+--------------+--------------+--------------+
+|        |   0    |      P       |      0       |      P       |      1       |
+|  <-->  |   1    |      1       |      P       |      0       |      P       |
+|        |   P    |      P       |      P       |      P       |      P       |
++--------+--------+--------------+--------------+--------------+--------------+
