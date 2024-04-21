@@ -107,17 +107,17 @@ if __name__ == '__main__':
 
         elif choice == "4":
 
-            #1. Check if deterministic
+            #1. Check if deterministic and complete else determinize if necessary then complete
             deterministic = isDeterministic(alphabet, states, initialStates, listTransitions)
-            if deterministic:
-                print("This automaton is  already deterministic !")
-            else:
-                print("This automaton is not deterministic")
-
-                detAlphabet, detStates, detInitialStates, detFinalStates, detTransitions = determinize(alphabet, states, initialStates, finalStates, listTransitions)
-
-                print("We obtain the following deterministic automaton :")
-                displayAutomaton(detAlphabet, detStates, detInitialStates, detFinalStates, detTransitions)
+        complete = isComplete(alphabet, states, finalStates, listTransitions)
+        
+        if not (deterministic and complete):
+            if not deterministic:
+                alphabet, states, initialStates, finalStates, listTransitions = determinize(alphabet, states, initialStates, finalStates, listTransitions)
+            if not complete:
+                alphabet, states, initialStates, finalStates, listTransitions = completeAutomaton(alphabet, states, initialStates, finalStates, listTransitions)
+            
+            displayAutomaton(alphabet, states, initialStates, finalStates, listTransitions)
 
 
             input("\nPress to continue\n")
@@ -135,6 +135,8 @@ if __name__ == '__main__':
         elif choice == "6":
 
             #6. Word Recognation
+            
+
             break
 
         elif choice == "7":
