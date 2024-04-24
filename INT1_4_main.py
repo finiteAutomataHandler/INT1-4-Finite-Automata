@@ -111,13 +111,15 @@ if __name__ == '__main__':
             break
 
         elif choice == "5":
-
-            #5. Obtain an equivalent minimal FA
-            minimized = minimize(alphabet, states, initialStates, finalStates, listTransitions)
-            print("Minimized DFA:")
-            print(alphabet, states, initialStates, finalStates, listTransitions)
-            print(minimized)
-            displayAutomaton(minimized[0], minimized[1], minimized[2], minimized[3], minimized[4])
+            if isDeterministic(alphabet, states, initialStates, listTransitions) == False or isComplete(alphabet, states, finalStates, listTransitions) == False:
+                print("The automaton is not deterministic or complete, we are unable to minimize it for now.")
+            else:
+                #5. Obtain an equivalent minimal FA
+                minimized = minimize(alphabet, states, initialStates, finalStates, listTransitions)
+                print("Minimized DFA:")
+                print(alphabet, states, initialStates, finalStates, listTransitions)
+                print(minimized)
+                displayAutomaton(minimized[0], minimized[1], minimized[2], minimized[3], minimized[4])
             
 
         elif choice == "6":
