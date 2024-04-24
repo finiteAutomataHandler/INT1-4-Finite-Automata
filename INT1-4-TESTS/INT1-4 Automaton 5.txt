@@ -1,0 +1,91 @@
+
+Please, enter the automaton id :
+
+5
+['a', 'b'] ['1', '2', '3', '4'] ['1', '3'] ['2', '4'] ['0,a,0', '0,b,0', '1,a,2', '1,b,0', '3,a,0', '3,b,4']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is not standardized, creating a new version now :
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b']
+Initial States : ['i']
+Final States : ['2', '4']
+List of States : ['1', '2', '3', '4', 'i']
+List of transitions : ['0,a,0', '0,b,0', '1,a,2', '1,b,0', '3,a,0', '3,b,4', 'i,a,2', 'i,b,0', 'i,a,0', 'i,b,4']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 4
++--------+--------+--------------+--------------+
+| Status | States | Transition a | Transition b |
++--------+--------+--------------+--------------+
+|  -->   |   13   |      20      |      04      |
+|  <--   |   20   |      0       |      0       |
+|  <--   |   04   |      0       |      0       |
+|        |   0    |      0       |      0       |
+|        |   P    |      P       |      P       |
++--------+--------+--------------+--------------+
+
+Press to continue
+5
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+
+Minimized DFA:
+['a', 'b'] ['13', '20', '04', '0', 'P'] 13 ['20', '04'] ['13,a,20', '13,b,04', '20,a,0', '20,b,0', '04,a,0', '04,b,0', '0,a,0', '0,b,0', 'P,a,P', 'P,b,P']
+[['a', 'b'], ['13', '20', '04', '0'], ['13'], ['04', '20'], ['13,a,20', '13,b,04', '20,a,0', '20,b,0', '04,a,0', '04,b,0', '0,a,0', '0,b,0']]
++--------+--------+--------------+--------------+
+| Status | States | Transition a | Transition b |
++--------+--------+--------------+--------------+
+|  -->   |   13   |      20      |      04      |
+|  <--   |   20   |      0       |      0       |
+|  <--   |   04   |      0       |      0       |
+|        |   0    |      0       |      0       |
++--------+--------+--------------+--------------+

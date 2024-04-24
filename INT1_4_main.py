@@ -4,10 +4,11 @@ from INT1_4_determinize import *
 from INT1_4_complete import *
 from INT1_4_standart import *
 from INT1_4_Minimize import *
+from INT1_4_Complementary_and_recognition import *
 
 if __name__ == '__main__':
 
-    print("INT1-4 ROUGIER Jules, VAIO Lorenzo, LEBRAS Valentin, BRAHAM Kenzan and MARCHAL Thomas")
+    print("INT1-4 ROUGIER Jules, VAIO Lorenzo, LEBRAS Valentin, BRAHAM Kenza and MARCHAL Thomas")
 
     print("\n\n\n")
     print("░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓█▓▒░      ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓██████████████▓▒░░▒▓████████▓▒░ ")
@@ -21,8 +22,6 @@ if __name__ == '__main__':
 
     file = selectFile()
     alphabet, states, initialStates, finalStates, listTransitions = openFile(file)
-
-    print(alphabet, states, initialStates, finalStates, listTransitions)
 
     choice = 0
     choiceList = ["1", "2", "3", "4", "5", "6", "7", "8"]
@@ -39,7 +38,6 @@ if __name__ == '__main__':
         if choice == "1":
             
             #1. Display the table of the automate
-            print("\n\n\n\n================== DISPLAY AUTOMATON ================== \n")
             displayAutomaton(alphabet, states, initialStates, finalStates, listTransitions)
             input("\nPress to continue\n")
 
@@ -100,17 +98,34 @@ if __name__ == '__main__':
                 print("This automaton is already standardized")
             else:
                 print("This automaton is not standardized, creating a new version now :")
-            std_alphabet, std_states, std_initialStates, std_finalStates, std_listTransitions = standardizeAutomaton(
+                std_alphabet, std_states, std_initialStates, std_finalStates, std_listTransitions = standardizeAutomaton(
                 alphabet, states, initialStates, finalStates, listTransitions)
+                displayAutomaton(std_alphabet, std_states, std_initialStates, std_finalStates, std_listTransitions)
 
-            break
+            input("\nPress to continue\n")
 
         elif choice == "4":
 
-            #4. Obtain an equivalent complete deterministic FA
-            break
+            #1. Check if deterministic and complete else determinize if necessary then complete
+            deterministic = isDeterministic(alphabet, states, initialStates, listTransitions)
+            complete = isComplete(alphabet, states, finalStates, listTransitions)
+        
+            if not (deterministic or complete):
+                if not deterministic:
+                    print("This  automaton is not deterministic\n")
+                    alphabet, states, initialStates, finalStates, listTransitions = determinize(alphabet, states, initialStates, finalStates, listTransitions)
+                if not complete:
+                    print("This  automaton is not complete\n")
+                    alphabet, states, initialStates, finalStates, listTransitions = completeAutomaton(alphabet, states, initialStates, finalStates, listTransitions)
+            
+            print("The deterministic and complete automaton :\n")
+            displayAutomaton(alphabet, states, initialStates, finalStates, listTransitions)
+
+
+            input("\nPress to continue\n")
 
         elif choice == "5":
+
             if isDeterministic(alphabet, states, initialStates, listTransitions) == False or isComplete(alphabet, states, finalStates, listTransitions) == False:
                 print("The automaton is not deterministic or complete, we are unable to minimize it for now.")
             else:
@@ -121,17 +136,17 @@ if __name__ == '__main__':
                 print(minimized)
                 displayAutomaton(minimized[0], minimized[1], minimized[2], minimized[3], minimized[4])
             
-
         elif choice == "6":
 
-            #6. Word Recognation
-            break
+            word_recognition(alphabet, states, initial_states, final_states, list_transitions)
 
         elif choice == "7":
+            complementary_automaton = complementary_automaton(alphabet, states, initialStates, finalStates, listTransitions)
+            print("Complementary Automaton:")
+            displayAutomaton(complementary_automaton[0],complementary_automaton[1], complementary_automaton[2], complementary_automaton[3], complementary_automaton[4])
 
-            #7. Obtain a complementary automate
-            break
-
+            word_recognition(complementary_automaton[0],complementary_automaton[1], complementary_automaton[2], complementary_automaton[3], complementary_automaton[4])
+            
         elif choice == "8":
 
             #8. Quit

@@ -1,0 +1,92 @@
+Please, enter the automaton id :
+
+15
+['a', 'b', 'c', 'd'] ['0', '1', '2', '3', '4'] ['1'] ['4'] ['1,a,1', '1,c,3', '1,d,4', '1,b,2', '2,b,2', '2,c,3', '2,d,4', '2,a,0', '3,c,3', '3,a,0', '3,b,0', '3,d,4', '4,d,4', '4,a,0', '4,b,0', '4,c,0', '0,a,0']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is not standardized, creating a new version now :
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b', 'c', 'd']
+Initial States : ['i']
+Final States : ['4']
+List of States : ['0', '1', '2', '3', '4', 'i']
+List of transitions : ['1,a,1', '1,c,3', '1,d,4', '1,b,2', '2,b,2', '2,c,3', '2,d,4', '2,a,0', '3,c,3', '3,a,0', '3,b,0', '3,d,4', '4,d,4', '4,a,0', '4,b,0', '4,c,0', '0,a,0', 'i,a,1', 'i,c,3', 'i,d,4', 'i,b,2']
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 4
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition d |
++--------+--------+--------------+--------------+--------------+--------------+
+|        |   0    |      0       |      P       |      P       |      P       |
+|  -->   |   1    |      1       |      2       |      3       |      4       |
+|        |   2    |      0       |      2       |      3       |      4       |
+|        |   3    |      0       |      0       |      3       |      4       |
+|  <--   |   4    |      0       |      0       |      0       |      4       |
+|        |   P    |      P       |      P       |      P       |      P       |
++--------+--------+--------------+--------------+--------------+--------------+
+
+Press to continue
+5
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+Minimized DFA:
+['a', 'b', 'c', 'd'] ['0', '1', '2', '3', '4', 'P'] ['1'] ['4'] ['1,a,1', '1,c,3', '1,d,4', '1,b,2', '2,b,2', '2,c,3', '2,d,4', '2,a,0', '3,c,3', '3,a,0', '3,b,0', '3,d,4', '4,d,4', '4,a,0', '4,b,0', '4,c,0', '0,a,0', 'P,a,P', 'P,b,P', '0,b,P', 'P,c,P', '0,c,P', 'P,d,P', '0,d,P']
+[['a', 'b', 'c', 'd'], ['0', '1', '2', '3', '4', 'P'], ['1'], ['4'], ['0,a,0', '0,b,P', '0,c,P', '0,d,P', '1,a,1', '1,c,3', '1,d,4', '1,b,2', '2,b,2', '2,c,3', '2,d,4', '2,a,0', '3,c,3', '3,a,0', '3,b,0', '3,d,4', '4,d,4', '4,a,0', '4,b,0', '4,c,0', 'P,a,P', 'P,b,P', 'P,c,P', 'P,d,P']]
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition d |
++--------+--------+--------------+--------------+--------------+--------------+
+|        |   0    |      0       |      P       |      P       |      P       |
+|  -->   |   1    |      1       |      2       |      3       |      4       |
+|        |   2    |      0       |      2       |      3       |      4       |
+|        |   3    |      0       |      0       |      3       |      4       |
+|  <--   |   4    |      0       |      0       |      0       |      4       |
+|        |   P    |      P       |      P       |      P       |      P       |
++--------+--------+--------------+--------------+--------------+--------------+

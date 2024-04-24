@@ -1,0 +1,105 @@
+
+Please, enter the automaton id :
+
+16
+['a', 'b', 'c', 'd'] ['0', '1', '2', '3', '4'] ['1'] ['0'] ['1,a,1', '1,a,2', '2,b,2', '2,b,3', '3,c,3', '3,c,4', '4,d,4', '4,d,0']
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 3
+This automaton is not standardized, creating a new version now :
+This is the standardized version of the automaton :
+
+Alphabet : ['a', 'b', 'c', 'd']
+Initial States : ['i']
+Final States : ['0']
+List of States : ['0', '1', '2', '3', '4', 'i']
+List of transitions : ['1,a,1', '1,a,2', '2,b,2', '2,b,3', '3,c,3', '3,c,4', '4,d,4', '4,d,0', 'i,a,1', 'i,a,2']
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition d |
++--------+--------+--------------+--------------+--------------+--------------+
+|  <--   |   0    |     ---      |     ---      |     ---      |     ---      |
+|        |   1    |     1,2      |     ---      |     ---      |     ---      |
+|        |   2    |     ---      |     2,3      |     ---      |     ---      |
+|        |   3    |     ---      |     ---      |     3,4      |     ---      |
+|        |   4    |     ---      |     ---      |     ---      |     4,0      |
+|  -->   |   i    |     1,2      |     ---      |     ---      |     ---      |
++--------+--------+--------------+--------------+--------------+--------------+
+
+Press to continue
+4
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 4
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition d |
++--------+--------+--------------+--------------+--------------+--------------+
+|  -->   |   1    |      12      |      P       |      P       |      P       |
+|        |   12   |      12      |      23      |      P       |      P       |
+|        |   23   |      P       |      23      |      34      |      P       |
+|        |   34   |      P       |      P       |      34      |      40      |
+|  <--   |   40   |      P       |      P       |      P       |      40      |
+|        |   P    |      P       |      P       |      P       |      P       |
++--------+--------+--------------+--------------+--------------+--------------+
+
+Press to continue
+5
+
+
+
+
+================== MAIN MENU ==================
+
+1. Display the table of the automate
+2. Check automaton characteristics (Deterministic/Complete/Standard)
+3. Standardize the automaton
+4. Obtain an equivalent complete deterministic FA
+5. Obtain an equivalent minimal FA
+6. Word Recognition
+7. Obtain a complementary automate
+8. Quit
+
+Your choice :
+ -> 5
+Minimized DFA:
+['a', 'b', 'c', 'd'] ['1', '12', '23', '34', '40', 'P'] 1 ['40'] ['1,a,12', '12,a,12', '12,b,23', '23,b,23', '23,c,34', '34,c,34', '34,d,40', '40,d,40', 
+'P,a,P', 'P,b,P', '1,b,P', 'P,c,P', '1,c,P', 'P,d,P', '1,d,P', '12,c,P', '12,d,P', '23,a,P', '23,d,P', '34,a,P', '34,b,P', '40,a,P', '40,b,P', '40,c,P'] 
+[['a', 'b', 'c', 'd'], ['1', '12', '23', '34', '40', 'P'], ['1'], ['40'], ['1,a,12', '1,b,P', '1,c,P', '1,d,P', '12,a,12', '12,b,23', '12,c,P', '12,d,P', '23,b,23', '23,c,34', '23,a,P', '23,d,P', '34,c,34', '34,d,40', '34,a,P', '34,b,P', '40,d,40', '40,a,P', '40,b,P', '40,c,P', 'P,a,P', 'P,b,P', 'P,c,P', 
+'P,d,P']]
++--------+--------+--------------+--------------+--------------+--------------+
+| Status | States | Transition a | Transition b | Transition c | Transition d |
++--------+--------+--------------+--------------+--------------+--------------+
+|  -->   |   1    |      12      |      P       |      P       |      P       |
+|        |   12   |      12      |      23      |      P       |      P       |
+|        |   23   |      P       |      23      |      34      |      P       |
+|        |   34   |      P       |      P       |      34      |      40      |
+|  <--   |   40   |      P       |      P       |      P       |      40      |
+|        |   P    |      P       |      P       |      P       |      P       |
++--------+--------+--------------+--------------+--------------+--------------+
